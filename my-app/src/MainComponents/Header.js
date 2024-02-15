@@ -19,6 +19,8 @@ function Header() {
             <link rel="icon" href="Logo.svg" />
             <meta name="theme-color" content="#000000" />
             <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Markazi+Text:400,700&display=swap"></link>
+            <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Karla:wght@300&display=swap"></link>
+
 
         </head>
     );
