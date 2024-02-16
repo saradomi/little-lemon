@@ -141,7 +141,7 @@ nav a {
 }
 
 nav a:hover {
-  color: yellow; /* Adjust the hover color */
+  color: #F4CE14; /* Adjust the hover color */
 }
 .section-title {
   color:#333333;
@@ -170,11 +170,11 @@ nav a:hover {
 }
 .card-container {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-  grid-gap: 20px;
+  grid-template-columns: repeat(auto-fill, minmax(290px, 1fr));
+  grid-gap: 30px;
+  margin-top: 50px;
 }
 .card {
-
   flex-direction: column;
   align-items: flex-start;
   margin-bottom: 20px;
@@ -213,7 +213,43 @@ nav a:hover {
 .delivery svg {
   margin-left: 15px;
 }
-
+/*  Testimonials */
+.testimonials {
+  background-color: #EE9972;
+  margin-top: 80px;
+  padding: 100px 0;
+}
+.testimonials-container{
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  grid-gap: 20px;
+}
+.testimonials-card {
+  flex-direction: column;
+  align-items: flex-start;
+  margin-bottom: 20px;
+  border-radius: 25px;
+  overflow: hidden;
+  background-color: #FBDABB;
+}
+/* Chicago Story */
+.chicago-story {
+  padding: 80px 0;
+}
+.image-container {
+  position: relative;
+  min-height: 200px;
+}
+.image-container img {
+  border-radius: 5%;
+  position: absolute;
+  max-width: 270px;
+}
+.image-container .on-top-img {
+  position: absolute;
+  transform: translate(50%, 50%);
+  object-fit: cover; /* Ensure the images cover the container */
+}
 @media (max-width: 768px) {
   #nav-bar {
     display: none;
@@ -238,4 +274,7 @@ footer ul{
   justify-content: space-between;
   margin: 0;
   flex-wrap: wrap;
+}
+footer a {
+  text-decoration: none;
 }

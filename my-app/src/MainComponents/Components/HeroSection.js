@@ -9,9 +9,10 @@ function HeroSection() {
                         <h1 className="title">Little Lemon</h1>
                         <h2 className="sub-title" style={{ marginTop: "-20px", paddingTop: "0px" }}>Chicago</h2>
                         <p className="lead-text" >
-                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                            A culinary haven where global flavors meet local charm. Led by Chef Mario and Adrian, our cozy eatery offers a delightful menu crafted from the freshest ingredients.
+                            Join us for a memorable dining experience, where every dish tells a story and every visit feels like home. 
                         </p>
-                        <button className="primary-button" style={{ marginTop: "100px" }}>Reserve A Table</button>
+                        <button className="primary-button" style={{ marginTop: "80px" }}>Reserve A Table</button>
                     </div>
                     <div className="col-6">
                         <img className="round-img" src="restauranfood.jpg" alt="food on a tray"></img>

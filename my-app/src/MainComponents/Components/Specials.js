@@ -34,25 +34,27 @@ function Specials() {
                         </Link>
                     </div>
                 </div>
-                <div className="card-container" style={{ marginTop: "20px"}}>
-                    <Card
-                        name="Greek Salad"
-                        description="The famous greek salad of crispy lettuce, peppers, olives and our Chicago style feta cheese, garnished with crunchy garlic and rosemary croutons."
-                        price="12.00€"
-                        imgSource="greek salad.jpg"
-                    />
-                    <Card
-                        name="Bruschetta"
-                        description="Our Bruschetta is made from grilled bread that has been smeared with garlic and seasoned with salt and olive oil."
-                        price="5.99€"
-                        imgSource="restaurant chef B.jpg"
-                    />
-                    <Card
-                        name="Lemon Dessert"
-                        description="This comes straight from grandma’s recipe book, every last ingredient has been sourced and is as authentic as can be imagined."
-                        price="5.00€"
-                        imgSource="lemon dessert.jpg"
-                    />
+                <div >
+                    <div className="card-container">
+                        <Card
+                            name="Greek Salad"
+                            description="The famous greek salad of crispy lettuce, peppers, olives and our Chicago style feta cheese, garnished with crunchy garlic and rosemary croutons."
+                            price="12.00€"
+                            imgSource="greek salad.jpg"
+                        />
+                        <Card
+                            name="Bruschetta"
+                            description="Our Bruschetta is made from grilled bread that has been smeared with garlic and seasoned with salt and olive oil."
+                            price="5.99€"
+                            imgSource="restaurant chef B.jpg"
+                        />
+                        <Card
+                            name="Lemon Dessert"
+                            description="This comes straight from grandma’s recipe book, every last ingredient has been sourced and is as authentic as can be imagined."
+                            price="5.00€"
+                            imgSource="lemon dessert.jpg"
+                        />
+                    </div>
                 </div>
             </div>
         </section>
