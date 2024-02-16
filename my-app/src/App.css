@@ -84,6 +84,18 @@
   font-size: 18px;
   font-weight:  300;
 }
+.card-title {
+  font-size: 24px;
+  font-family: 'Markazi Text', serif;
+  font-weight: 700;
+  margin-right: auto;
+}
+.weeks-special{
+  font-size: 16px;
+  font-weight: 700;
+  font-family: 'Karla';
+  color: #EE9972;
+}
 /*  Buttons */
 .primary-button {
   background-color: #F4CE14;
@@ -95,6 +107,11 @@
   border: 0;
   border-radius: 5px;
   align-self: end;
+}
+.primary-button:hover {
+  color: white;
+  cursor: pointer;
+  transform: scale(1.05);
 }
 /* NAV BAR */
 
@@ -126,6 +143,12 @@ nav a {
 nav a:hover {
   color: yellow; /* Adjust the hover color */
 }
+.section-title {
+  color:#333333;
+  font-size: 40px;
+  font-weight: 1500;
+  font-family: 'Karla';
+}
 /* Hero Section */
 .hero {
   background-color: #495E57;
@@ -133,12 +156,64 @@ nav a:hover {
 .round-img  {
   width: 100%;
   border-radius: 25px;
-  margin-top: -100px;
+  margin-top: -80px;
   left: 0; /* Keep the image aligned to the left edge of the container */
-  transform: translateY(100px);
+  transform: translateY(80px);
   max-height: 440px;
   object-fit: cover;
 }
+
+/* Specials Section */
+.specials {
+  background-color: white;
+  margin-top: 80px;
+}
+.card-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  grid-gap: 20px;
+}
+.card {
+
+  flex-direction: column;
+  align-items: flex-start;
+  margin-bottom: 20px;
+  border-radius: 25px 25px 0 0;
+  overflow: hidden;
+  transition: transform 0.3s ease;
+  background-color: #EDEFEE;
+  position: relative;
+}
+.card:hover {
+  transform: translateY(-5px);
+}
+.card img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+.card-content {
+  padding: 20px;
+}
+.card-content span{
+  display: flex;
+  align-items: center,
+}
+.delivery {
+  position: absolute;
+  bottom: 20px;
+  font-weight: 700;
+  font-size: 16px;
+  cursor: pointer;
+  align-items: center;
+}
+.delivery:hover {
+  color: #495E57;
+}
+.delivery svg {
+  margin-left: 15px;
+}
+
 @media (max-width: 768px) {
   #nav-bar {
     display: none;
@@ -151,6 +226,7 @@ nav a:hover {
     margin-top: 5vw;
     margin-left: 0px;
   }
+
 }
 
 /*  FOOTER */

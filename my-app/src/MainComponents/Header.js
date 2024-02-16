@@ -16,12 +16,12 @@ function Header() {
 
             <link rel="stylesheet" href="index.css" />
             <link rel="stylesheet" href="App.css" />
-            <link rel="icon" href="Logo.svg" />
+            <link rel="icon" href="favicon.ico" />
             <meta name="theme-color" content="#000000" />
             <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Markazi+Text:400,700&display=swap"></link>
             <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Karla:wght@300&display=swap"></link>
-
-
+            <link href="//netdna.bootstrapcdn.com/twitter-bootstrap/2.3.2/css/bootstrap-combined.no-icons.min.css" rel="stylesheet"></link>
+            <link href="//netdna.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.css" rel="stylesheet"></link>
         </head>
     );
 }
