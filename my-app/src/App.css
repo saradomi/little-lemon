@@ -162,6 +162,11 @@ nav a:hover {
   max-height: 440px;
   object-fit: cover;
 }
+.round-img-2 {
+  width: 70%;
+  border-radius: 25px;
+  float: right;
+}
 
 /* Specials Section */
 .specials {

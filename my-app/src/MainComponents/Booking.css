@@ -1,0 +1,22 @@
+.form {
+    display: grid;
+    max-width: 500px;
+    gap: 20px;
+    margin-left: auto ;
+    margin-right: auto;
+}
+.form-item {
+    background-color: #EDEFEE;
+    color: #495E57;
+    padding: 19px 24px;
+    font-family: 'Karla';
+    font-weight: 900;
+    font-size: 18px;
+    border: 0;
+    border-radius: 5px;
+    align-self: end;
+}
+.form-label {
+    font-family: 'Karla';
+    font-size: 24px;
+}
