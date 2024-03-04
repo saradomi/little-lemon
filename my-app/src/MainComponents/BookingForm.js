@@ -2,17 +2,11 @@ import React from 'react';
 import "./Booking.css";
 import {useState} from "react";
 
-const BookingForm = () => {
+const BookingForm = ({ availableTimes, dispatch, ...props }) => {
   const handleSubmit = (e) => {
     e.preventDefault();
   };
-  const [availableTimes, setAvailableTimes] = useState([
-    {time: "17:00", reserved: false},
-    {time: "18:00", reserved: false},
-    {time: "19:00", reserved: false},
-    {time: "20:00", reserved: false},
-    {time: "21:00", reserved: false},
-  ]);
+  
   const [date, setDate] = useState();
   const [time, setTime] = useState();
   const [guests, setGuests] = useState();
@@ -23,6 +17,7 @@ const BookingForm = () => {
   };
   const handleTime = (value) => {
     setTime(value);
+    dispatch();
   };
   const handleGuests = (value) => {
     setGuests(value);
@@ -48,14 +43,14 @@ const BookingForm = () => {
         </div>
       </div>
     </section>
-    <section className="container">
+    <section className="container" aria-label="Main Content">
       <form className="form" onSubmit={handleSubmit}>
         <label htmlFor="res-date" className='form-label'>Choose date</label>
         <input type="date" id="res-date" className='form-item' onChange={handleDate}/>
         <label htmlFor="res-time" className='form-label'>Choose time</label>
         <select id="res-time" className='form-item'  onChange={handleTime}>
-          {availableTimes.map((time, index) => (
-            <option key={index}>{time.time}</option>
+          {availableTimes && availableTimes.times.map((time, index) => (
+            <option key={index}>{time}</option>
           ))}
         </select>
 
