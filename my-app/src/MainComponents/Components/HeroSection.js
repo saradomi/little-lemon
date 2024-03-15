@@ -12,7 +12,7 @@ function HeroSection() {
                             A culinary haven where global flavors meet local charm. Led by Chef Mario and Adrian, our cozy eatery offers a delightful menu crafted from the freshest ingredients.
                             Join us for a memorable dining experience, where every dish tells a story and every visit feels like home. 
                         </p>
-                        <button className="primary-button" style={{ marginTop: "80px" }}>Reserve A Table</button>
+                        <button className="primary-button" style={{ marginTop: "80px" }} aria-label="On Click">Reserve A Table</button>
                     </div>
                     <div className="col-6">
                         <img className="round-img" src="restauranfood.jpg" alt="food on a tray"></img>

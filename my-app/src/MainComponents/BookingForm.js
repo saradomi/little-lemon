@@ -12,9 +12,19 @@ const BookingForm = ({ dispatch, state }) => {
   const [time, setTime] = useState();
   const [guests, setGuests] = useState();
   const [occasion, setOccasion] = useState();
+  const [guestsError, setGuestsError] = useState(false);
+  const [dateError, setDateError] = useState(false);
+  const [occasionError, setOccasionError] = useState(false);
 
   const handleSubmit = (e) => {
     e.preventDefault();
+    if(!date) {
+      setDateError(true);
+    }
+    if(!occasion){
+      setOccasionError(true);
+    }
+    if(occasion && date){
     const reservation = {
       res_date: date,
       res_time: time,
@@ -24,21 +34,25 @@ const BookingForm = ({ dispatch, state }) => {
     const submitResponse = submitAPI(reservation);
     if (submitResponse === true) {
       navigate("/booking/confirmation", { state: reservation });
-    }
+    }}
   };
 
   const handleDate = (e) => {
     setDate(e.target.value);
     dispatch({ type: "update_times", selectedDate: e.target.value });
+    setDateError(false);
   };
   const handleTime = (e) => {
     setTime(e.target.value);
   };
   const handleGuests = (e) => {
-    setGuests(e.target.value);
+    const value = e.target.value;
+    setGuestsError(value > 10 || value < 1);
+    setGuests(value);
   };
   const handleOccasion = (e) => {
     setOccasion(e.target.value);
+    if(e.target.value !="") setOccasionError(false);
   };
 
   return (
@@ -61,7 +75,14 @@ const BookingForm = ({ dispatch, state }) => {
     <section className="container" aria-label="Main Content">
       <form className="form" onSubmit={handleSubmit}>
         <label htmlFor="res-date" className='form-label'>Choose date</label>
-        <input type="date" id="res-date" className='form-item' onChange={handleDate}/>
+        <input
+          type="date"
+          value={date}
+          id="res-date"
+          className={dateError ? 'input-error form-item' : 'form-item'}
+          onChange={handleDate}
+        />
+        {dateError && <p style={{color:"red", marginTop: "-15px"}}>Must choose a date.</p>}
         <label htmlFor="res-time" className='form-label'>Choose time</label>
         <select id="res-time" className='form-item'  onChange={handleTime}>
           {state?.availableTimes.map((time, index) => (
@@ -70,16 +91,24 @@ const BookingForm = ({ dispatch, state }) => {
         </select>
 
         <label htmlFor="guests" className='form-label'>Number of guests</label>
-        <input type="number" placeholder="1" min="1" max="10" id="guests" className='form-item'  onInput={handleGuests}/>
-
+        <input
+          type="number"
+          placeholder="1" min="1" max="10"
+          id="guests"
+          className={guestsError ? 'input-error form-item' : 'form-item'}
+          onInput={handleGuests}
+          value={guests}
+        />
+        {guestsError && <p style={{color:"red", marginTop: "-15px"}}>Number of guests must be between 1 and 10.</p>}
         <label htmlFor="occasion" className='form-label'>Occasion</label>
-        <select id="occasion" className='form-item'  onChange={handleOccasion}>
-          <option>Birthday</option>
-          <option>Engagement</option>
-          <option>Anniversary</option>
+        <select id="occasion" className={occasionError ? 'input-error form-item' : 'form-item'}  onChange={handleOccasion} >
+          <option value="">Select</option>
+          <option value="Birthday">Birthday</option>
+          <option value="Engagement">Engagement</option>
+          <option value="Anniversary">Anniversary</option>
         </select>
-
-        <input type="submit" className="primary-button" value="Make Your reservation" />
+        {occasionError && <p style={{color:"red", marginTop: "-15px"}}>Must choose an occasion.</p>}
+        <input type="submit" className="primary-button" aria-label="On Click" value="Make Your reservation" disabled={guestsError } />
       </form>
     </section>
     </>

@@ -30,7 +30,7 @@ function Specials() {
                     </div>
                     <div className="col-6">
                         <Link to="/menu">
-                            <button className="primary-button" style={{float: "right"}}>Online Menu</button>
+                            <button className="primary-button" style={{float: "right"}} aria-label="On Click">Online Menu</button>
                         </Link>
                     </div>
                 </div>

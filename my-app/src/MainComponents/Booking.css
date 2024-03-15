@@ -16,6 +16,9 @@
     border-radius: 5px;
     align-self: end;
 }
+.input-error{
+    border: 1px solid red;
+}
 .form-label {
     font-family: 'Karla';
     font-size: 20px;
