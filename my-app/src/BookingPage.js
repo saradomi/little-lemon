@@ -5,29 +5,39 @@ import Nav from "./MainComponents/Nav";
 import Header from "./MainComponents/Header";
 import BookingForm from "./MainComponents/BookingForm";
 import Footer from "./MainComponents/Footer";
+import { fetchAPI } from "./API";
 
-export const initializeTimes = () => {
-  return {
-    times: [
-      '17:00', '18:00', '19:00', '20:00', '21:00'
-    ],
-    selectedDate: '2024-03-04',
-  };
+const reducer = (state, action) => {
+  switch (action.type) {
+    case "update_times":
+      return {
+        ...state,
+        availableTimes: updateTimes(action.selectedDate),
+      };
+    default:
+      return state;
+  }
 };
 
-export const updateTimes = (state, action) => {
-  return state;
+export function updateTimes(selectedDate) {
+  const date = new Date(selectedDate);
+  return fetchAPI(date);
+}
+
+export function initializeTimes() {
+  return {
+    availableTimes: fetchAPI(new Date()),
+  };
 }
 
 function BookingPage() {
 
-  const [availableTimes, dispatch] = useReducer(updateTimes, initializeTimes());
-
+  const [state, dispatch] = useReducer(reducer, initializeTimes());
   return (
     <>
       <Header/>
       <Nav/>
-      <BookingForm availableTimes={availableTimes} dispatchTime={dispatch} />
+      <BookingForm dispatch={dispatch} state={state} />
       <Footer/>
     </>
   );

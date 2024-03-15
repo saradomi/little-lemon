@@ -20,6 +20,7 @@ function Header() {
             <meta name="theme-color" content="#000000" />
             <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Markazi+Text:400,700&display=swap"></link>
             <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Karla:wght@300&display=swap"></link>
+            <script src="https://raw.githubusercontent.com/Meta-Front-End-Developer-PC/capstone/master/api.js"></script>
         </head>
     );
 }

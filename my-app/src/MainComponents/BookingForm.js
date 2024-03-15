@@ -1,29 +1,44 @@
 import React from 'react';
 import "./Booking.css";
 import {useState} from "react";
+import {useNavigate } from "react-router-dom";
+import {submitAPI} from"../API";
 
-const BookingForm = ({ availableTimes, dispatch, ...props }) => {
-  const handleSubmit = (e) => {
-    e.preventDefault();
-  };
-  
+const BookingForm = ({ dispatch, state }) => {
+
+  const navigate = useNavigate();
+
   const [date, setDate] = useState();
   const [time, setTime] = useState();
   const [guests, setGuests] = useState();
   const [occasion, setOccasion] = useState();
 
-  const handleDate = (value) => {
-    setDate(value);
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    const reservation = {
+      res_date: date,
+      res_time: time,
+      res_guests: guests,
+      res_occasion: occasion,
+    };
+    const submitResponse = submitAPI(reservation);
+    if (submitResponse === true) {
+      navigate("/booking/confirmation", { state: reservation });
+    }
   };
-  const handleTime = (value) => {
-    setTime(value);
-    dispatch();
+
+  const handleDate = (e) => {
+    setDate(e.target.value);
+    dispatch({ type: "update_times", selectedDate: e.target.value });
   };
-  const handleGuests = (value) => {
-    setGuests(value);
+  const handleTime = (e) => {
+    setTime(e.target.value);
   };
-  const handleOccasion = (value) => {
-    setOccasion(value);
+  const handleGuests = (e) => {
+    setGuests(e.target.value);
+  };
+  const handleOccasion = (e) => {
+    setOccasion(e.target.value);
   };
 
   return (
@@ -49,7 +64,7 @@ const BookingForm = ({ availableTimes, dispatch, ...props }) => {
         <input type="date" id="res-date" className='form-item' onChange={handleDate}/>
         <label htmlFor="res-time" className='form-label'>Choose time</label>
         <select id="res-time" className='form-item'  onChange={handleTime}>
-          {availableTimes && availableTimes.times.map((time, index) => (
+          {state?.availableTimes.map((time, index) => (
             <option key={index}>{time}</option>
           ))}
         </select>

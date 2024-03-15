@@ -1,32 +1,23 @@
 import  {initializeTimes, updateTimes} from './BookingPage'; 
+import { fetchAPI } from "./API";
 
-describe('initializeTimes', () => {
-  test('returns the correct expected value', () => {
-
-    const newState = initializeTimes();
-
-    const expectedState = {
-      times: [
-        '17:00', '18:00', '19:00', '20:00', '21:00'
-      ],
-      selectedDate: '2024-03-04'
-    };
-
-    expect(newState).toEqual(expectedState);
-  });
+test("initializeTimes validate that it returns expected value", () => {
+  const expectedResult = { availableTimes: fetchAPI(new Date()) };
+  const result = initializeTimes();
+  expect(result).toEqual(expectedResult);
 });
 
-describe('updateTimes', () => {
-  test('returns the same value that is provided in the state', () => {
-    const state = {
-      times: [
-        '17:00', '18:00', '19:00', '20:00', '21:00'
-      ],
-      selectedDate: '2024-03-04'
-    };
+test("updateTimes", () => {
+  const selectedDate = new Date("2022-06-01");
+  const availableTimes = updateTimes(selectedDate);
 
-    const newState = updateTimes(state);
-
-    expect(newState).toEqual(state);
-  });
+  expect(Array.isArray(availableTimes)).toBe(true);
+  expect(availableTimes).toEqual([
+    "17:00",
+    "17:30",
+    "18:00",
+    "20:00",
+    "21:00",
+    "23:30",
+  ]);
 });
