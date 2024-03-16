@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import BurguerMenu from "./BurguerMenu/BurguerMenu";
 
 function Nav() {
   const [prevScrollPos, setPrevScrollPos] = useState(0);
@@ -25,6 +26,7 @@ function Nav() {
     return (
       <nav class="container">
         <div class="row">
+          <BurguerMenu />
           <ul id="nav-bar" class="col-12">
               <li><img id="main-logo" alt="logo footer"  src="Logo.svg"/></li>
               <li><a href="/">Homepage</a></li>

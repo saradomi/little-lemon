@@ -239,6 +239,25 @@ nav a:hover {
   border-radius: 25px;
   overflow: hidden;
   background-color: #FBDABB;
+  opacity: 75%;
+}
+.testimonials-card:hover{
+  opacity: 100%;
+}
+.testimonials-card p{
+  padding: 15px;
+  height: 60px;
+  font-family: 'Karla';
+  margin-bottom: 25px;
+}
+.testimonials-name img{
+  max-height: 120px;
+  width: 100%;
+  object-fit: cover;
+}
+.testimonials-name p{
+  font-weight: 700;
+  padding: 15px;
 }
 /* Chicago Story */
 .chicago-story {
@@ -283,6 +302,15 @@ footer ul{
   margin: 0;
   flex-wrap: wrap;
 }
-footer a {
+footer li {
   text-decoration: none;
+  color: #282c34;
+}
+.footer a {
+  max-height: 20px;
+}
+.social-media *{
+  padding-right: 25px;
+  max-height: 30px;
+  margin-bottom: 10px;
 }
