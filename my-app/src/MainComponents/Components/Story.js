@@ -2,7 +2,7 @@
 
 function Story() {
     return (
-        <section className="chicago-story">
+        <section className="chicago-story" id="story">
             <div className="container">
                 <div className="row">
                     <div className="col-6" style={{marginBottom: "30px"}}>

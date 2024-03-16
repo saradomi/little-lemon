@@ -17,7 +17,7 @@ function Testimonials() {
         </div>
     }
     return (
-        <section className="testimonials">
+        <section className="testimonials" id="testimonials">
             <div className="container">
                 <div >
                     <div style={{ textAlign: "center", marginBottom: "30px" }}>

@@ -22,7 +22,7 @@ function Specials() {
         </div>
     }
     return (
-        <section className="specials">
+        <section className="specials" id="menu">
             <div className="container">
                 <div className="row">
                     <div className="col-6">
