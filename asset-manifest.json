@@ -1,15 +1,15 @@
 {
   "files": {
-    "main.css": "/my-app/build/static/css/main.f31be6da.css",
-    "main.js": "/my-app/build/static/js/main.ed13e78d.js",
-    "static/js/787.d4aba7ab.chunk.js": "/my-app/build/static/js/787.d4aba7ab.chunk.js",
-    "index.html": "/my-app/build/index.html",
-    "main.f31be6da.css.map": "/my-app/build/static/css/main.f31be6da.css.map",
-    "main.ed13e78d.js.map": "/my-app/build/static/js/main.ed13e78d.js.map",
-    "787.d4aba7ab.chunk.js.map": "/my-app/build/static/js/787.d4aba7ab.chunk.js.map"
+    "main.css": "/little-lemon/my-app/build/static/css/main.f31be6da.css",
+    "main.js": "/little-lemon/my-app/build/static/js/main.0b27d577.js",
+    "static/js/787.d4aba7ab.chunk.js": "/little-lemon/my-app/build/static/js/787.d4aba7ab.chunk.js",
+    "index.html": "/little-lemon/my-app/build/index.html",
+    "main.f31be6da.css.map": "/little-lemon/my-app/build/static/css/main.f31be6da.css.map",
+    "main.0b27d577.js.map": "/little-lemon/my-app/build/static/js/main.0b27d577.js.map",
+    "787.d4aba7ab.chunk.js.map": "/little-lemon/my-app/build/static/js/787.d4aba7ab.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.f31be6da.css",
-    "static/js/main.ed13e78d.js"
+    "static/js/main.0b27d577.js"
   ]
 }
