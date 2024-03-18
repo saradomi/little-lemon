@@ -31,7 +31,7 @@ function BurguerMenu() {
   return (
     <Menu isOpen={menuOpen} onStateChange={handleStateChange}>
       <Link
-        to="/"
+        to="/little-lemon/booking/confirmation/"
         onClick={() => {
           closeMenu();
           scrollTo("#hero");
@@ -41,7 +41,7 @@ function BurguerMenu() {
         <span style={{ marginLeft: "20px" }}>Home</span>
       </Link>
       <Link 
-        to="/booking"
+        to="/little-lemon/booking"
         className="nav-item"
         ><span style={{ marginLeft: "20px" }}>Booking</span></Link>
       <Link

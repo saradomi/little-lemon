@@ -33,7 +33,7 @@ const BookingForm = ({ dispatch, state }) => {
     };
     const submitResponse = submitAPI(reservation);
     if (submitResponse === true) {
-      navigate("/booking/confirmation", { state: reservation });
+      navigate("little-lemon/booking/confirmation", { state: reservation });
     }}
   };
 
