@@ -19,12 +19,12 @@
     "yup": "^1.3.3"
   },
   "scripts": {
-    "predeploy": "cd my-app && npm run build",
-    "deploy": "gh-pages -d my-app/build",
-    "start": "cd my-app && react-scripts start",
-    "build": "cd my-app && react-scripts build",
-    "test": "cd my-app && react-scripts test",
-    "eject": "cd my-app && react-scripts eject"
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build",
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test",
+    "eject": "creact-scripts eject"
   },
   "eslintConfig": {
     "extends": [
