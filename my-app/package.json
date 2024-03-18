@@ -2,7 +2,7 @@
   "name": "my-app",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://saradomi.github.io/little-lemon/my-app/build",
+  "homepage": "https://saradomi.github.io/little-lemon/",
   "dependencies": {
     "@fortawesome/react-fontawesome": "^0.2.0",
     "@testing-library/jest-dom": "^5.17.0",
@@ -19,12 +19,12 @@
     "yup": "^1.3.3"
   },
   "scripts": {
-    "predeploy": "npm run build",
-    "deploy": "gh-pages -d build",
-    "start": "react-scripts start",
-    "build": "react-scripts build",
-    "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "predeploy": "cd my-app && npm run build",
+    "deploy": "gh-pages -d my-app/build",
+    "start": "cd my-app && react-scripts start",
+    "build": "cd my-app && react-scripts build",
+    "test": "cd my-app && react-scripts test",
+    "eject": "cd my-app && react-scripts eject"
   },
   "eslintConfig": {
     "extends": [
