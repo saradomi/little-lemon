@@ -7,11 +7,11 @@ import BookingConfirmation from './MainComponents/BookingComponents/BookingConfi
 
 function App() {
   return (
-      <Routes basename="/little-lemon">
-        <Route path="/little-lemon/"  element={<Homepage />}></Route>
-        <Route path="/little-lemon/booking" element={<BookingPage />}></Route>
-        <Route path="/little-lemon/booking/confirmation" element={<BookingConfirmation />}></Route>
-      </Routes>
+    <Routes basename="/little-lemon">
+      <Route path="/" element={<Homepage />} />
+      <Route path="/booking" element={<BookingPage />} />
+      <Route path="/booking/confirmation" element={<BookingConfirmation />} />
+    </Routes>
   );
 }
 
