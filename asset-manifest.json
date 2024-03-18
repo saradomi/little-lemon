@@ -1,15 +1,15 @@
 {
   "files": {
-    "main.css": "/cool-doggo/my-app/build/static/css/main.f31be6da.css",
-    "main.js": "/cool-doggo/my-app/build/static/js/main.970eff76.js",
-    "static/js/787.d4aba7ab.chunk.js": "/cool-doggo/my-app/build/static/js/787.d4aba7ab.chunk.js",
-    "index.html": "/cool-doggo/my-app/build/index.html",
-    "main.f31be6da.css.map": "/cool-doggo/my-app/build/static/css/main.f31be6da.css.map",
-    "main.970eff76.js.map": "/cool-doggo/my-app/build/static/js/main.970eff76.js.map",
-    "787.d4aba7ab.chunk.js.map": "/cool-doggo/my-app/build/static/js/787.d4aba7ab.chunk.js.map"
+    "main.css": "/my-app/build/static/css/main.f31be6da.css",
+    "main.js": "/my-app/build/static/js/main.5e8ea1bf.js",
+    "static/js/787.d4aba7ab.chunk.js": "/my-app/build/static/js/787.d4aba7ab.chunk.js",
+    "index.html": "/my-app/build/index.html",
+    "main.f31be6da.css.map": "/my-app/build/static/css/main.f31be6da.css.map",
+    "main.5e8ea1bf.js.map": "/my-app/build/static/js/main.5e8ea1bf.js.map",
+    "787.d4aba7ab.chunk.js.map": "/my-app/build/static/js/787.d4aba7ab.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.f31be6da.css",
-    "static/js/main.970eff76.js"
+    "static/js/main.5e8ea1bf.js"
   ]
 }
