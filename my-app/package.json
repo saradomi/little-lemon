@@ -1,6 +1,7 @@
 {
   "name": "my-app",
   "version": "0.1.0",
+  "homepage": "https://https://saradomi.github.io/little-lemon/build",
   "private": true,
   "dependencies": {
     "@fortawesome/react-fontawesome": "^0.2.0",
