@@ -1,6 +1,5 @@
 import { useEffect, useState } from "react";
 import BurguerMenu from "./BurguerMenu/BurguerMenu";
-import { Link } from 'react-router-dom';
 
 function Nav() {
   const [prevScrollPos, setPrevScrollPos] = useState(0);
@@ -30,11 +29,11 @@ function Nav() {
           <BurguerMenu />
           <ul id="nav-bar" class="col-12">
               <li><img id="main-logo" alt="logo footer"  src="Logo.svg"/></li>
-              <li><Link to="/">Homepage</Link></li>
+              <li><a href="/">Homepage</a></li>
               <li><a onClick={() => {
                   scrollTo("#menu");
                 }}>Menu</a></li>
-              <li><Link to="/booking">Booking</Link></li>
+              <li><a href="/booking">Booking</a></li>
               <li><a href="" onClick={() => {
                 alert("Sorry, this feature is not yet ready.");
               }}>Order Online</a></li>

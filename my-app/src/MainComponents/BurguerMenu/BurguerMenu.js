@@ -31,7 +31,7 @@ function BurguerMenu() {
   return (
     <Menu isOpen={menuOpen} onStateChange={handleStateChange}>
       <Link
-        to="/booking/confirmation/"
+        to="/"
         onClick={() => {
           closeMenu();
           scrollTo("#hero");
