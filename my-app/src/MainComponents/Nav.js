@@ -29,11 +29,11 @@ function Nav() {
           <BurguerMenu />
           <ul id="nav-bar" class="col-12">
               <li><img id="main-logo" alt="logo footer"  src="Logo.svg"/></li>
-              <li><a href="/">Homepage</a></li>
+              <li><a href="/little-lemon/">Homepage</a></li>
               <li><a onClick={() => {
                   scrollTo("#menu");
                 }}>Menu</a></li>
-              <li><a href="/booking">Booking</a></li>
+              <li><a href="/little-lemon/booking">Booking</a></li>
               <li><a href="" onClick={() => {
                 alert("Sorry, this feature is not yet ready.");
               }}>Order Online</a></li>
