@@ -2,7 +2,7 @@
 
 ## Project Description
 
-Little Lemon Restaurant is an online application designed to streamline the process of making reservations and ordering food from the comfort of your home. Whether you're planning a special dinner or simply craving your favorite dish, Little Lemon Restaurant ensures a seamless experience for both customers and restaurant staff.
+Designed and built for Meta Front-End Developer Professional Certificate. Little Lemon Restaurant is an online application designed to streamline the process of making reservations and ordering food from the comfort of your home.
 
 ## Features
 
